@@ -7,8 +7,8 @@
 
 import Foundation
 
-class MockHTTPClient: HTTPClientRequestDispatcher {
-    func request<ResponseType>(_ request: Request<ResponseType>) async throws -> ResponseType {
+public class MockHTTPClient: HTTPClientRequestDispatcher {
+    public func request<ResponseType>(_ request: Request<ResponseType>) async throws -> ResponseType {
         let result = try await execute(request: request.underlyingRequest)
         do {
             return try request.decode(result)
@@ -22,7 +22,7 @@ class MockHTTPClient: HTTPClientRequestDispatcher {
         }
     }
 
-    func execute(request: HTTPRequest) async throws -> HTTPResponse {
+    public func execute(request: HTTPRequest) async throws -> HTTPResponse {
         guard
             !nextHandlers.isEmpty
         else {
@@ -41,8 +41,8 @@ class MockHTTPClient: HTTPClientRequestDispatcher {
 
     // MARK: Internal
 
-    typealias HTTPResult = Result<HTTPResponse, HTTPError>
-    typealias MockHandler = (HTTPRequest) -> HTTPResult
+    public typealias HTTPResult = Result<HTTPResponse, HTTPError>
+    public typealias MockHandler = (HTTPRequest) -> HTTPResult
 
     func then(_ handler: @escaping MockHandler) {
         nextHandlers.append(handler)
