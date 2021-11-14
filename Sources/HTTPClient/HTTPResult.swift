@@ -35,19 +35,3 @@ public struct HTTPError: Error {
     public let response: HTTPResponse?
     public let underlyingError: Error?
 }
-
-// public extension HTTPResult {
-//  var request: HTTPRequest {
-//    switch self {
-//      case let .success(response): return response.request
-//      case let .failure(error): return error.request
-//    }
-//  }
-//
-//  var response: HTTPResponse? {
-//    switch self {
-//      case let .success(response): return response
-//      case let .failure(error): return error.response
-//    }
-//  }
-// }
