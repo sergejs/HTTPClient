@@ -7,7 +7,9 @@ let package = Package(
     name: "HTTPClient",
     platforms: [
         .macOS(.v12),
-        .iOS(.v15),
+        .iOS(.v13),
+        .watchOS(.v6),
+        .tvOS(.v13),
     ],
     products: [
         .library(
