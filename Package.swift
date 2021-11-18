@@ -19,11 +19,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/WeTransfer/Mocker.git", .upToNextMajor(from: "2.3.0")),
+        .package(url: "https://github.com/Sergejs/ServiceContainer.git", .upToNextMajor(from: "0.0.1")),
     ],
     targets: [
         .target(
             name: "HTTPClient",
-            dependencies: []
+            dependencies: [
+                .product(name: "ServiceContainer", package: "ServiceContainer"),
+            ]
         ),
         .testTarget(
             name: "HTTPClientTests",

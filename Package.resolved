@@ -9,6 +9,15 @@
           "revision": "352066f1a29108548386487ae083b4115e94c1fb",
           "version": "2.5.4"
         }
+      },
+      {
+        "package": "ServiceContainer",
+        "repositoryURL": "https://github.com/Sergejs/ServiceContainer.git",
+        "state": {
+          "branch": null,
+          "revision": "c76d38291c5352ada3d4949b8874cebedd3e7da8",
+          "version": "0.0.1"
+        }
       }
     ]
   },
