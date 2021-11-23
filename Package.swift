@@ -19,7 +19,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/WeTransfer/Mocker.git", .upToNextMajor(from: "2.3.0")),
-        .package(url: "https://github.com/Sergejs/ServiceContainer.git", .upToNextMajor(from: "0.0.1")),
+        .package(url: "https://github.com/Sergejs/ServiceContainer.git", .branch("main")),
     ],
     targets: [
         .target(
