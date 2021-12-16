@@ -2,14 +2,11 @@ import Combine
 import Foundation
 
 public struct HTTPRequest {
-    // MARK: Lifecycle
-
     public init(
         method: HTTPMethod = .get,
         urlComponents: URLComponents,
         headers: [String: String] = [:],
-        body: HTTPBody = EmptyBody(),
-        responseDecoder: JSONDecoder = JSONDecoder()
+        body: HTTPBody = EmptyBody()
     ) {
         self.method = method
         self.headers = headers
@@ -35,15 +32,11 @@ public struct HTTPRequest {
         }
     }
 
-    // MARK: Public
-
     public var method: HTTPMethod
     public var headers: [String: String]
     public var body: HTTPBody
 
-    // MARK: Internal
-
-    internal var urlComponents: URLComponents? = URLComponents()
+    var urlComponents: URLComponents? = URLComponents()
 }
 
 public extension HTTPRequest {

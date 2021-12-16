@@ -6,7 +6,10 @@ import PackageDescription
 let package = Package(
     name: "HTTPClient",
     platforms: [
-        .iOS(.v15),
+        .macOS(.v10_15),
+        .iOS(.v13),
+        .watchOS(.v6),
+        .tvOS(.v13),
     ],
     products: [
         .library(
@@ -16,7 +19,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/WeTransfer/Mocker.git", .upToNextMajor(from: "2.3.0")),
-        .package(url: "https://github.com/Sergejs/ServiceContainer.git", .branch("main")),
+        .package(url: "https://github.com/Sergejs/ServiceContainer.git", .upToNextMajor(from: "0.2.0")),
     ],
     targets: [
         .target(

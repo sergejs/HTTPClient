@@ -6,17 +6,17 @@
         "repositoryURL": "https://github.com/WeTransfer/Mocker.git",
         "state": {
           "branch": null,
-          "revision": "352066f1a29108548386487ae083b4115e94c1fb",
-          "version": "2.5.4"
+          "revision": "077c52a31f5ebb649ebe546cc77d8647760b2279",
+          "version": "2.5.5"
         }
       },
       {
         "package": "ServiceContainer",
         "repositoryURL": "https://github.com/Sergejs/ServiceContainer.git",
         "state": {
-          "branch": "main",
-          "revision": "769febf991b1069d8790d23e0e701fd202c8e4a6",
-          "version": null
+          "branch": null,
+          "revision": "9fddea459393de1d06ad8ef7df3c264f5e98335c",
+          "version": "0.2.0"
         }
       }
     ]

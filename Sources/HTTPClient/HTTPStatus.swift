@@ -12,8 +12,6 @@ public extension HTTPStatus {
         case clientError
         case serverError
 
-        // MARK: Internal
-
         var range: ClosedRange<Int> {
             switch self {
                 case .informational: return 100 ... 199

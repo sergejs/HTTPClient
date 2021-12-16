@@ -8,13 +8,11 @@ public protocol HTTPClientRequestDispatcher {
 }
 
 public final class HTTPClient {
-    // MARK: Lifecycle
+    private let executionQueue = OperationQueue()
 
     public init(session: URLSessionProtocol) {
         self.session = session
     }
-
-    // MARK: Internal
 
     let session: URLSessionProtocol
 }
